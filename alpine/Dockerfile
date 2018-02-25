@@ -17,4 +17,5 @@ VOLUME /var/lib/beanstalkd
 
 EXPOSE 11300
 
-ENTRYPOINT ["beanstalkd", "-l", "0.0.0.0", "-p", "11300", "-u", "beanstalkd"]
+ENTRYPOINT ["beanstalkd", "-l", "0.0.0.0", "-p", "11300", "-u", "beanstalkd", "-b", "/var/lib/beanstalkd"]
+CMD ["-z", "65535"]
