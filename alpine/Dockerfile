@@ -1,8 +1,8 @@
-FROM alpine:3.7
+FROM alpine:3.12
 
 RUN addgroup -S beanstalkd && adduser -S -G beanstalkd beanstalkd
 
-ENV BEANSTALKD_VERSION 1.10
+ENV BEANSTALKD_VERSION 1.12
 
 RUN apk add --no-cache 'su-exec>=0.2'
 
